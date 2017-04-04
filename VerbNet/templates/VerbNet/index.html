@@ -1,0 +1,44 @@
+{% extends 'VerbNet/base.html' %}
+
+{% block content %}
+
+<!-- HOME PAGE -->
+<div id="main-content">
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Что такое VerbNet?</h2>
+      <div class="description">
+        <p>VerbNet (Глагольный WordNet) – это электронная база русских глаголов, которые собраны в определенные синонимические ряды. </p>
+      </div>
+      <div class="centered"> 
+        <a class="btn btn-default btn-lg" href="{% url 'verbnet' %}" role="button"> Узнать больше</a>
+      </div>
+    </div>
+  </div>
+<!-- Marketing messaging and featurettes -->
+  <div class="container marketing">
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="img-circle" src="../static/images/noun_67633_cc.png" alt="Generic placeholder image" width="140" height="140">
+        <h3>Глаголы</h3>
+        <p>Посмотрите, в какие синонимические ряды входят русские глаголы, и какими семантическими отношениями они связаны между собой.</p>
+        <p><a class="btn btn-default btn-lg" href="{% url 'synsets' %}" role="button">Далее</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="img-circle" src="../static/images/noun_50035.png" alt=None width="140" height="140">
+        <h3>Графы</h3>
+        <p>Визуализируйте семантическую сеть, графами которой являются главные глаголы из синонимических рядов, а ребрами - отношения между ними.
+        </p>
+        <p><a class="btn btn-default btn-lg" href="{% url 'graphs' %}" role="button">Далее</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="img-circle" src="../static/images/noun_486549_cc.png" alt="Generic placeholder image" width="140" height="140">
+        <h3>О проекте</h3>
+        <p>Узнайте больше о проекте: авторы, цели, задачи, данные, инструменты, методы и многое другое.</p>
+        <p><a class="btn btn-default btn-lg" href="{% url 'about' %}" role="button">Далее</a></p>
+      </div><!-- End of /.col-lg-4 -->
+    </div><!-- End of /.row -->
+  </div><!-- End of /.container marketing -->
+</div><!-- End of #main-content -->
+<!-- END OF HOME PAGE -->
+{% endblock %}

@@ -1,0 +1,59 @@
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="../static/cy2neo/styles/codemirror.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/codemirror-neo.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/cy2neo.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/neod3.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/datatable.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/vendor.css"> <!-- bootstrap-->
+  <link rel="stylesheet" href="../static/cy2neo/styles/sweet-alert.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/gh-fork-ribbon.css">
+</head>
+<body>
+  <div>
+  <input class="form-control" type="url" value="http://localhost:7474" id="neo4jUrl"/><br/>
+  <input class="form-control" type="text" size="8" value="neo4j" id="neo4jUser"/>
+  <input class="form-control" type="password" size="8" placeholder="password" value="admin" id="neo4jPass"/><br/>
+  <textarea name="cypher" id="cypher" rows="4" cols="120" data-lang="cypher" class="code form-control">
+  MATCH (n)-[r]->(m)
+  RETURN n,r,m
+  LIMIT 50;
+  </textarea>
+  <a href="#" title="Execute" id="execute"><i class="fa fa-play-circle-o"></i></a>
+  </div>
+
+<div role="tabpanel">
+
+  <!-- Nav tabs -->
+
+  <!-- Tab panes -->
+        <div class="tab-pane active" id="graph">&nbsp;</div>
+
+</div>
+
+
+<script src="../static/cy2neo/scripts/codemirror.js"></script>
+<script src="../static/cy2neo/scripts/codemirror-cypher.js"></script>
+<script src="../static/cy2neo/scripts/vendor.js"></script>
+<script src="../static/cy2neo/scripts/sweet-alert.min.js"></script>
+<script src="../static/cy2neo/scripts/neod3.js"></script>
+<script src="../static/cy2neo/scripts/neod3-visualization.js"></script>
+<script src="../static/cy2neo/scripts/neo4d3.js"></script>
+<script src="../static/cy2neo/scripts/cy2neod3.js"></script>
+<script src="../static/cy2neo/scripts/jquery.dataTables.min.js"></script>
+<script src="../static/cy2neo/scripts/cypher.datatable.js"></script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        //todo dynamic configuration
+        var config = {}
+        var connection = function() { return {url:$("#neo4jUrl").val(), user:$("#neo4jUser").val(),pass:$("#neo4jPass").val()}; }
+        new Cy2NeoD3(config,"graph","datatable","cypher","execute", connection , true);
+    });
+</script>
+
+
+</body>
+</html>

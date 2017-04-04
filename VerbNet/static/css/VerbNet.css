@@ -1,0 +1,289 @@
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #FFFFFF;
+  font-family: 'Oxygen', sans-serif;
+  padding-top: 110px;
+}
+
+
+/** HEADER **/
+#header-nav {
+  background-color: #FFFFFF;
+  border-radius: 0;
+  border-bottom: 0.8px solid #E5E5E5;
+}
+.navbar-brand {
+  padding-top: 25px;
+  height: 60px;
+}
+.navbar-brand h1 {
+  font-family: 'Lora', serif;
+  color: black;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  display: block;
+  width: 100%;
+  color: #9599a1;
+  padding: 12px 20px 12px 0;
+  padding-left: 23.33333px;
+  font-family: "Open Sans","Helvetica Neue","Helvetica", "Helvetica","Arial", sans-serif;
+  font-size: 1.55rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+#nav-list a:hover {
+  color: #0C0C0C;
+}
+/* END HEADER */
+
+
+
+/* FOOTER */
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #30333a;
+  border-top: 0;
+}
+
+#first-column a {
+  font-family: 'Lora', serif;
+  color: white;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  line-height: .75;
+}
+#first-column a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+} 
+
+#second-column, #third-column, a {
+  font-family: "Open Sans","Helvetica Neue","Helvetica", "Helvetica","Arial", sans-serif;
+  color: white;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: inherit;
+}
+#second-column, #third-column, a:hover {
+  color: #0C0C0C;
+  text-decoration: none;
+}
+
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+/* END FOOTER */
+
+
+
+/* HOME PAGE */
+
+.container .jumbotron {
+  /*box-shadow: 0 0 50px #3F0C1F;*/
+  border: 0;
+  background-color: white;
+  color: black;
+}
+.container h2 {
+  font-family: "Open Sans","Helvetica Neue","Helvetica", "Helvetica","Arial", sans-serif;
+  color: black;
+  font-size: 3em;
+  margin-top: 0;
+  line-height: .75;
+  text-align: center;
+}
+
+.description {
+  font-family: "Open Sans","Helvetica Neue","Helvetica", "Helvetica","Arial", sans-serif;
+  color: black;
+  font-size: 1.75em;
+  text-align: center;
+  margin-top: 1.50em;
+}
+
+.btn {
+  background-color: rgb(109, 204, 156) !important;
+  border-width: 0;
+  border-radius: 0;
+  color: #fff; 
+}
+
+.centered {
+  text-align: center;
+}
+
+.text-justify p {
+  padding-top: 20px;
+  font-size: 1.15em;
+}
+.list-unstyled a {
+  color: black;
+  font-size: 1em;
+}
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h3 {
+  font-weight: normal;
+  font-family: "Open Sans","Helvetica Neue","Helvetica", "Helvetica","Arial", sans-serif;
+  color: #30333a;
+  font-size: 1.2em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 130px;
+  color: #30333a;
+  margin-bottom: -20px;
+}
+
+.marketing .col-lg-4 img {
+  border: 1px solid #9599a1;
+}
+/* END HOME PAGE */
+
+/*CONTACT PAGE*/
+
+.contact-page .col-lg-6 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-page h2 {
+  font-weight: normal;
+  color: #30333a;
+  font-size: 1.35em;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+.contact-page p {
+  color: black;
+  font-size: 1em;
+}
+
+.contact-info a {
+  color: #30333a;
+  font-size: 1em;
+  text-transform: lowercase;
+}
+.alert {
+  color: black;
+}
+.ok-button {
+  background-color: rgb(109, 204, 156);
+}
+/*END OF CONTACT PAGE*/
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {}
+
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  .navbar-brand h1 { /* Project name */
+    padding-top: 5px;
+    font-size: 2em;
+    padding-left: 20px;
+  }
+  /* End Header */
+}
+
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 25px;
+    height: 80px;
+  }
+  .navbar-brand h1 { /* Project name */
+    /*padding-top: 5px;*/
+    font-size: 4.5vw;
+    /*padding-left: 20px;*/
+  }
+  #myNavbar a { /* Nav list text */
+    font-size: 0.8em;
+  }
+  /* End Header */
+}
+
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 25px;
+    height: 80px;
+  }
+  .navbar-brand h1 { /* Project name */
+    padding-top: 5px;
+    font-size: 5.0vw;
+    padding-left: 20px;
+  }
+  #myNavbar a { /* Collapsed nav text */
+    font-size: 0.8em;
+  }
+  .navbar-toggle {
+    margin-top: 1.75em;
+  }
+  /* End Header */
+
+  /* Footer */
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0; /* margin already exists on the whole row */
+  }
+  .panel-footer section hr {
+    width: 50%;
+  }
+  /* End Footer */
+}
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  /* Header */
+  .navbar-brand h1 { /* Project name */
+    padding-top: 5px;
+    font-size: 5.5vw;
+  }
+  #myNavbar a { /* Collapsed nav text */
+    font-size: 0.8em;
+  }
+  .navbar-toggle {
+    margin-top: 1.75em;
+  }
+  /* End Header */
+}
+
+
+

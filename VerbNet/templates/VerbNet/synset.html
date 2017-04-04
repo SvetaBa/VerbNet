@@ -1,0 +1,26 @@
+{% extends 'VerbNet/base.html' %}
+
+{% block content %}
+
+<!-- HOME PAGE -->
+<div id="main-content">
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Synset: {{synset}}</h2>
+      <div class="description">
+        <ul class="list-group">
+        {% for verb in verbs %}
+          <li class="list-group-item">
+          <h3 style="color: #000;">{{verb.verb}}</h3>
+          <p style="color: #000;">Определение: {{verb.definition}}</p>
+          <p style="color: #000;">Пример: {{verb.sample}}</p>
+          <p style="color: #000;">Синонимы: {{verb.synonyms}}</p>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- END OF HOME PAGE -->
+
+{% endblock %}

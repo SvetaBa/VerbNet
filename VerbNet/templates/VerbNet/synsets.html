@@ -1,0 +1,21 @@
+{% extends 'VerbNet/base.html' %}
+
+{% block content %}
+
+<!-- HOME PAGE -->
+<div id="main-content">
+  <div class="container">
+    <div class="jumbotron">
+      <div class="description">
+        <h3>Синсеты</h3>
+        <ul class="list-group">
+        {% for synset in synsets %}
+          <li class="list-group-item"><a href="{% url 'synset' synset.id %}"><p style="color: #000;">{{synset.predicates}}</p></a></li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- END OF HOME PAGE -->
+
+{% endblock %}

@@ -1,0 +1,82 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>VerbNet</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://malsup.github.com/min/jquery.form.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+  <script src="{% static 'js/VerbNet.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'css/VerbNet.css' %}">
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../static/cy2neo/styles/codemirror.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/codemirror-neo.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/cy2neo.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/neod3.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/datatable.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/vendor.css"> <!-- bootstrap-->
+  <link rel="stylesheet" href="../static/cy2neo/styles/sweet-alert.css">
+  <link rel="stylesheet" href="../static/cy2neo/styles/gh-fork-ribbon.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<nav id="header-nav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="{% url 'index' %}" class="pull-left visible-md visible-lg"></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'index' %}"><h1>VerbNet</h1></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul id="nav-list" class="nav navbar-nav navbar-right">
+        <li class="visible-xs active"><a href="index.html">Главная</a></li>
+        <li><a href="{% url 'synsets' %}"><br class="hidden-xs"> Глаголы</a></li>
+        <li><a href="{% url 'graphs' %}"><br class="hidden-xs"> Графы</a></li>
+        <li><a href="{% url 'verbnet' %}"><br class="hidden-xs"> Verbnet</a></li>
+        <li><a href="{% url 'about' %}"><br class="hidden-xs"> О проекте</a>
+        <li><a href="{% url 'contacts' %}"><br class="hidden-xs"> Контакты</a></li>
+      </ul>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- END OF HEADER -->
+
+    {% block content %}
+    {% endblock %}
+
+<!-- FOOTER -->
+<footer class="panel-footer">
+  <div class="container">
+    <div class="row">
+      <section id="first-column" class="col-sm-4">
+        <a href="{% url 'index' %}"> Verbnet</a>
+        <hr class="visible-xs">
+      </section>
+      <section id="second-column" class="col-sm-4">
+        <span><a href="{% url 'synsets' %}"> Глаголы</a></span><br>
+        <a href="{% url 'graphs' %}"> Графы</a><br>
+        <hr class="visible-xs">
+      </section>
+      <section id="third-column" class="col-sm-4">
+        <span><a href="{% url 'about' %}"> О проекте</a></span><br>
+        <a href="{% url 'contacts' %}"> Контакты</a><br>
+        <hr class="visible-xs">
+      </section>
+    </div>
+    <div class="text-center">&copy; Svetalana Baranova 2017</div>
+  </div>
+</footer>
+<!-- END OF FOOTER -->
+</body>
+</html>
